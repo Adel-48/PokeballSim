@@ -5,14 +5,16 @@ I tried to create a Pokeball simulator in c++.
 Pokemon game mechanics have always interested me and I  really wanted to recreate the Pokeball capture sequence. I felt that I wanted to use c++ for this small project as I wanted to practice some of the skills I have been learning. I had a look at the original developer's formula which looked something like this: 
 
 Catch rate:
+
 Calculate f: f = (HPmax * 255 * 4) / (HPcurrent * Ball), where all divisions are rounded down to the nearest integer. The minimum value of f is 1 and its maximum value is 255.
 
 Shake Checks:
+
 To perform a shake check, a random number between 0 and 65535 (inclusive) is generated and compared to b. If the number is greater than or equal to b, the check "fails".
 Four shake checks are performed. The Pokémon is caught if all four shake checks succeed. Otherwise, the Poké Ball will shake as many times as there were successful shake checks before the Pokémon breaks free.
 If a is 255 or greater, the capture will always succeed and no shake checks will be performed.
 
-I got the information from Here. 
+I got the information from https://bulbapedia.bulbagarden.net/wiki/Catch_rate . 
 
 After going through all the information it was clear that this was waaaay out of my league, so I simplified the formulas and used If statements to call the shake checks. If the requirements are met you will capture the pokemon and get a little pokedex update message. 
 
